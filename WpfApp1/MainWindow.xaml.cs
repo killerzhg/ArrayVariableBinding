@@ -23,7 +23,7 @@ namespace WpfApp1
     /// </summary>
     public partial class MainWindow : Window
     {
-        Variable variable = new Variable();
+        Variables variable = new Variables();
         DispatcherTimer timer = new DispatcherTimer();
 
         public MainWindow()
@@ -57,6 +57,7 @@ namespace WpfApp1
             //        break;
             //    }
             //}
+
             var itemToRemove = variable.LogList.FirstOrDefault(item => item.Message.Contains("2025"));
             if (itemToRemove != null)
             {
