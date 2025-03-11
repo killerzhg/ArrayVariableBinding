@@ -57,6 +57,7 @@ namespace WpfApp1
             //        break;
             //    }
             //}
+
             var itemToRemove = variable.LogList.FirstOrDefault(item => item.Message.Contains("2025"));
             if (itemToRemove != null)
             {
