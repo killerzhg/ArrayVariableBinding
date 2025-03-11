@@ -10,8 +10,6 @@ namespace WpfApp1
 {
      public class Variables : NotifyBase
     {
-        public Variables() { }
-
         public ObservableCollection<ListModel> LogList { get; set; } = new ObservableCollection<ListModel>();
 
         #region bool[]类型
