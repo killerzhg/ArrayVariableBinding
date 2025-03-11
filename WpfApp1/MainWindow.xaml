@@ -8,6 +8,7 @@
         Title="MainWindow" Height="450" Width="800">
     <StackPanel VerticalAlignment="Center">
         <TextBlock Text="{Binding TextArray[0]}"  HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="24"/>
+        <Button Content="Delete" Click="Button_Click"/>
         <DataGrid  ItemsSource="{Binding LogList}">
             <!--<DataGrid.Columns>
                 <DataGridTextColumn Header="索引" Width="1*" Binding="{Binding Index}"/>

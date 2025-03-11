@@ -38,12 +38,25 @@ namespace WpfApp1
             for (int i = 0; i < 10; i++)
             {
                 variable.LogList.Add(new ListModel() { Index =i, Message = DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss")});
-            } 
+            }
         }
 
         private void Timer_Tick(object sender, EventArgs e)
         {
+            Title = DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss");
             variable.UpdateTextArray(0, DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss"));
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            foreach (var item in variable.LogList)
+            {
+                if (item.Message.Contains("2025"))
+                {
+                    variable.LogList.Remove(item);
+                    break;
+                }
+            }
         }
     }
 }
