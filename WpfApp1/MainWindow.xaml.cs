@@ -49,13 +49,18 @@ namespace WpfApp1
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            foreach (var item in variable.LogList)
+            //foreach (var item in variable.LogList)
+            //{
+            //    if (item.Message.Contains("2025"))
+            //    {
+            //        variable.LogList.Remove(item);
+            //        break;
+            //    }
+            //}
+            var itemToRemove = variable.LogList.FirstOrDefault(item => item.Message.Contains("2025"));
+            if (itemToRemove != null)
             {
-                if (item.Message.Contains("2025"))
-                {
-                    variable.LogList.Remove(item);
-                    break;
-                }
+                variable.LogList.Remove(itemToRemove);
             }
         }
     }
