@@ -37,10 +37,10 @@ namespace WpfApp1
 
             for (int i = 0; i < 10; i++)
             {
-                variable.LogList.Add(new MessageModel() { Index =i, Message = DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss")});
-            }
-            
+                variable.LogList.Add(new ListModel() { Index =i, Message = DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss")});
+            } 
         }
+
         private void Timer_Tick(object sender, EventArgs e)
         {
             variable.UpdateTextArray(0, DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss"));

@@ -12,7 +12,7 @@ namespace WpfApp1
     {
         public Variable() { }
 
-        public ObservableCollection<MessageModel> LogList { get; set; } = new ObservableCollection<MessageModel>();
+        public ObservableCollection<ListModel> LogList { get; set; } = new ObservableCollection<ListModel>();
 
 
 
@@ -40,7 +40,7 @@ namespace WpfApp1
             }
         }
     }
-    public class MessageModel
+    public class ListModel
     {
         public int Index { get; set; }
         public string Message { get; set; }
